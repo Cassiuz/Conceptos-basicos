@@ -19,7 +19,7 @@ for (let i = 0; i < diasPorMes.length; i++) {
 }
 
 // SALIDA
-console.log('Los meses sin descuento serán: ', mesesSinDescuento)
+console.log('Los meses sin descuento serán: ', mesesSinDescuento);
 
 
 
