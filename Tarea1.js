@@ -4,13 +4,13 @@ const diasPorMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const minutosPermitidos = 450;
 // Minutos limite por dia
 const minutosDiarios = 15;
-// Conteo de meses
+// Conteo de meses sin descuento
 let mesesSinDescuento = 0;
 
 // Se recorre cada mes para evaluarlo
 for (let i = 0; i < diasPorMes.length; i++) {
   // Se verifica si excede los minutos permitidos
-  let minutosMensuales = diasPorMes[i] * minutosDiarios;
+  const minutosMensuales = diasPorMes[i] * minutosDiarios;
 
   // En caso de no exceder, se suman
   if (minutosMensuales <= minutosPermitidos) {
