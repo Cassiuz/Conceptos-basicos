@@ -1,7 +1,7 @@
 const diasDelMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 let diasEnfadada = 0;
 
-// RESOLUCION I
+// Días enfadada por año
 for (let i = 0; i < diasDelMes.length; i++) {
   if (diasDelMes[i] % 2 === 0) {
     diasEnfadada += diasDelMes[i] * 0.3;
@@ -11,9 +11,8 @@ for (let i = 0; i < diasDelMes.length; i++) {
   }
 }
 
-console.log('Días enfadada por año: ', Math.round(diasEnfadada));
 
-// RESOLUCION II
+// Mes a evitar
 const limiteEnfado = diasEnfadada / 2;
 diasEnfadada = 0;
 let mes = 0;
@@ -37,4 +36,6 @@ for (let i = 0; i < diasDelMes.length; i++) {
   }
 }
 
+// SALIDA
+console.log('Días enfadada por año: ', Math.round(diasEnfadada));
 console.log('El mes donde se le evita es: ', mes)
