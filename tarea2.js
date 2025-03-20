@@ -1,42 +1,46 @@
-const diasDelMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-let diasEnfadada = 0;
+// Lista de los dias del mes
+const diasMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-// Días enfadada por año
-for (let i = 0; i < diasDelMes.length; i++) {
-  if (diasDelMes[i] % 2 === 0) {
-    diasEnfadada += diasDelMes[i] * 0.3;
-    
-  } else {
-    diasEnfadada += diasDelMes[i] * 0.7;
-  }
+// Distribución de porcentajes
+const diasPares = 0.3;
+const diasImpares = 0.7;
+
+let totalDiasEnfadada = 0;
+let diasEnfadadaAcumulados = 0;
+const diasEnfadadaPorMes = [];
+
+// Determinar dias enojadas durante el año
+for (let i = 0; i < diasMes.length; i++) {
+
+    const dias = diasMes[i]; 
+    let porcentaje; // Declaramos la variable porcentaje
+
+    // Determina el porcentaje que le corresponde a cada mes
+    if (dias % 2 === 0){
+        porcentaje = diasPares;
+    } else {
+        porcentaje = diasImpares;
+    }
+
+    const diasEnfadada = Math.floor(dias * porcentaje);
+    diasEnfadadaPorMes.push(diasEnfadada); // Almacena la cantidad de enfados por mes
+    totalDiasEnfadada += diasEnfadada;
 }
 
 
-// Mes a evitar
-const limiteEnfado = diasEnfadada / 2;
-let MesEnfadada = 0;
-let mes = 0;
+const mitadDiasEnfadada = totalDiasEnfadada / 2
+let mesEvitar = 0;
 
-for (let i = 0; i < diasDelMes.length; i++) {
-  if (diasDelMes[i] % 2 === 0) {
-    MesEnfadada += diasDelMes[i] * 0.3;
-    
-    if (MesEnfadada > limiteEnfado) {
-      mes = i;
-      break;
+for (let i = 0; i < diasEnfadadaPorMes.length; i++){
+
+    diasEnfadadaAcumulados += diasEnfadadaPorMes[i];
+    if (diasEnfadadaAcumulados >= mitadDiasEnfadada) {
+        mesEvitar = i; // Retorna el mes (0-11)
+        break;
     }
-    
-  } else {
-    MesEnfadada += diasDelMes[i] * 0.7;
-    
-    if (MesEnfadada > limiteEnfado) {
-      mes = i;
-      break;
-    }
-  }
 }
 
-// SALIDA
-console.log('AÑO NO BISIESTO');
-console.log('Días enfadada por año: ', Math.round(diasEnfadada));
-console.log('El mes donde se le evita es: ', mes);
+// Ejemplo para año no bisiesto
+console.log("El total de días enfadada al año son: ", totalDiasEnfadada);
+console.log("El numero de mes a evitar es: ", mesEvitar);
+
