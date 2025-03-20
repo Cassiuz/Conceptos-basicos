@@ -34,6 +34,5 @@ Por suerte o por desgracia, Paulina no es experta en programación así que te h
 El programa calculará la tendencia como la resta entre la temperatura del último día y la del día anterior, es decir, tendencia = temperaturaAyer - temperaturaAnteayer.
 Si el resultado es positivo, o dicho de otra forma mayor que cero, la tendencia será al alza. Por otro lado, si el resultado es negativo, es decir, menor que cero, la tendencia será a la baja.
 En consecuencia, si la tendencia es positiva cocinará comidas frescas y si la tendencia es negativa comidas calientes.
-  - Tareas cumplidas:
-    Crear una función que permita calcular la tendencia dadas dos temperaturas, y devuelva si la tendencia es positiva o negativa
-    Crear un programa que recorra las semanas y calcule la tendencia para cada uno de los días donde sea posible
+  - Crear una función que permita calcular la tendencia dadas dos temperaturas, y devuelva si la tendencia es positiva o negativa.
+  - Crear un programa que recorra las semanas y calcule la tendencia para cada uno de los días donde sea posible
