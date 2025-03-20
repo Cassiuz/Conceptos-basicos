@@ -24,3 +24,16 @@ Concretamente, lo que debe hacer Facundo es crear un programa que se esté ejecu
 Por defecto, los empleados de Techplotadores S.A. trabajan de 8 de la mañana a 9 de la noche, por lo que la cuenta atrás deberá mostrar el tiempo que queda para esa hora de salida.
 El programa debe parar cuando termina la jornada laboral, pero la jefa de Facundo le ha pedido que, "para darle más emoción", introduzca una variable aleatoria que sume entre 10 y 60 minutos a la jornada de un empleado.
 Facundo está sudando, pero se pone manos a la obra corriendo. Será capaz de desarrollar el software que le ha pedido o acabará en la calle?
+
+# Ejercicio 4
+Paulina tiene una cafetería en una zona costera del norte de españa, donde sirve principalmente comidas.
+En su experiencia, entran más clientes en su negocio si sirve comidas frescas los días que hace calor y comidas calientes los días que hace frío, pero el tiempo en la zona es bastante impredecible.
+Para intentar mejorar sus beneficios, ha decidido registrar los valores de temperaturas de la última semana y calcular tendencia para decidir si, al día siguiente, servirá comidas frías o calientes.
+
+Por suerte o por desgracia, Paulina no es experta en programación así que te ha contratado a ti para que desarrolles un software que le diga cuál es la tendencia cada día.
+El programa calculará la tendencia como la resta entre la temperatura del último día y la del día anterior, es decir, tendencia = temperaturaAyer - temperaturaAnteayer.
+Si el resultado es positivo, o dicho de otra forma mayor que cero, la tendencia será al alza. Por otro lado, si el resultado es negativo, es decir, menor que cero, la tendencia será a la baja.
+En consecuencia, si la tendencia es positiva cocinará comidas frescas y si la tendencia es negativa comidas calientes.
+  - Tareas cumplidas:
+    Crear una función que permita calcular la tendencia dadas dos temperaturas, y devuelva si la tendencia es positiva o negativa
+    Crear un programa que recorra las semanas y calcule la tendencia para cada uno de los días donde sea posible
